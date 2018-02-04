@@ -3,4 +3,4 @@
 Rust Meetup Kata
 
 
-![ScreenShot](/screenshot.png)
+![screenshot.png](pictures/screenshot.png)
