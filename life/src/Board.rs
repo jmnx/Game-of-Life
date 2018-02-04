@@ -10,6 +10,7 @@ extern crate rand;
 pub struct Board();
 
 impl Board {
+    board: Vec<Vec<bool>>;
 
     static MATRIX: &'static [(i8, i8)] =
     &[
