@@ -24,12 +24,6 @@ fn print_help() {
     println!("  --random             generates random seed and runs it");
     println!("  --interactive        startes in interactive mode");
     println!("  --todo               print a list of TODOs");
-    if VERSION == "0.3" {
-        println!("\n 2nd Options:");
-        println!("  --save-steps         save every step to an file in ./steps/step_<n>.life");
-        println!("  --png                export every step as an png");
-        println!("  --run <n>            just run for n steps");
-    }
 }
 
 fn run_it(init_board: Vec<Vec<bool>>) {
@@ -47,20 +41,6 @@ fn run_it(init_board: Vec<Vec<bool>>) {
 
         board = update(board);
     }
-}
-
-fn todos() {
-    println!("TODOs:");
-    println!("* clear warnings");
-    println!("* clean up");
-    println!("* interactive");
-    println!("* object orientation");
-    println!("* by step save");
-    println!("* image generator");
-    println!("* colors");
-    println!("* config. for dead/alive cells");
-    println!("* GoL Webserver :-P");
-    println!("* GoL on the Blockchain :-P");
 }
 
 fn exit () {
@@ -103,9 +83,6 @@ fn main() {
             run_it(board);
         } else if command == "--interactive" {
             println!("TODO");
-        } else if command == "--todos" {
-            todos();
-            exit();
         }
 
         if args.len() >= 3 {
